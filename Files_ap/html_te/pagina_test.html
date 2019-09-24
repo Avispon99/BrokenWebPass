@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>prueba..</title>
+	<link rel='stylesheet' type='text/css' href='css/styl.css'/>
+</head>
+<body>
+	<!-- tres ejemplos de uso de css en style y un ejemplo de uso por importacion externa -->
+	<style> 
+		p {color:blue;}
+		.cont {color:red;}
+		#idd{color:green;}
+	</style>
+	<br><br>
+	<form method="post" action='php/backdoc.php'>
+	 	<center><p><b>TEST FUERZA BRUTA</b></p><center><br> <!-- si no se cierra <center> abarca a todo> -->
+		<p class='cont'>USER</p>
+		<input name='usertext' type='text'><b></b> <!-- input puede ser tipo textbox o boton tipo submit -->
+		<p id='idd'>PASSWORD</p>
+		<input name=passtext type='text'>
+		<input type='submit' value='Ingresar'><br><br>  
+		<P class='col'>IMPRIMIR MENSAJE</P> 
+	    <button value='mensaje'>Mensaje</button> <!-- la diferencia entre button y submit es que button no envia el formulario -->
+	</form>
+	<script>
+
+		var fun =function(e){
+			alert(message_v+' '+boton_s_t);
+			e.preventDefault()
+		}
+
+		var boton_s= document.getElementsByTagName('input')[1];	
+		var boton_s_t= document.getElementsByTagName('input')[1].type;
+		var message= document.getElementsByTagName('button')[0];	
+		var message_v= document.getElementsByTagName('button')[0].value;
+		message.addEventListener('click',fun);
+
+
+		
+	</script>
+</body>	
+<html>
